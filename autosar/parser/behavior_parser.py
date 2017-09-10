@@ -47,7 +47,7 @@ class BehaviorParser(object):
                   if portAPIOption is not None: internalBehavior.portAPIOptions.append(portAPIOption)
             elif xmlNode.tag == 'RUNNABLES':
                for xmRunnable in xmlNode.findall('./RUNNABLE-ENTITY'):
-                  runnableEntity = self.parseRunnableEntity(xmRunnable, parent)
+                  runnableEntity = self.parseRunnableEntity(xmRunnable, internalBehavior)
                   if runnableEntity is not None:
                      internalBehavior.runnables.append(runnableEntity)
             elif xmlNode.tag == 'PER-INSTANCE-MEMORYS':               
